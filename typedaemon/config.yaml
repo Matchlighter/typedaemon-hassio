@@ -20,7 +20,6 @@ ports:
 ports_description:
   80/tcp: Web interface
 hassio_api: true
-hassio_role: manager
 homeassistant_api: true
 host_network: true
 auth_api: true
@@ -29,6 +28,10 @@ map:
 - config:rw
 - media:rw
 - share:rw
+
+services:
+- mqtt:want
+
 environment:
   TYPEDAEMON_CONFIG: /config/typedaemon
 
