@@ -1,0 +1,5 @@
+---
+build_from:
+  aarch64: ghcr.io/matchlighter/typedaemon:dev
+  amd64: ghcr.io/matchlighter/typedaemon:dev
+  armv7: ghcr.io/matchlighter/typedaemon:dev
