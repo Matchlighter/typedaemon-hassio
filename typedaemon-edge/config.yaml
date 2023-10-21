@@ -17,8 +17,10 @@ arch:
 # - i386
 ports:
   80/tcp: 1880
+  9000/tcp: 9000
 ports_description:
   80/tcp: Web interface
+  9000/tcp: Http interface/API
 hassio_api: true
 homeassistant_api: true
 host_network: true
