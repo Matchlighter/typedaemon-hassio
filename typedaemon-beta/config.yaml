@@ -1,6 +1,6 @@
 ---
 url: https://github.com/matchlighter/typedaemon
-description: Typescript-based Automations, Services, and Entities
+description: Beta version of TypeDaemon add-on
 panel_icon: mdi:graph
 init: false
 homeassistant: 2021.3.0
@@ -30,9 +30,12 @@ services:
 - mqtt:want
 environment:
   TYPEDAEMON_CONFIG: /config/typedaemon
-options: {}
+options:
+  home_assistant_dashboard_integration: false
 schema: {}
-name: TypeDaemon
+name: TypeDaemon (beta)
 version: 0.1.0
-slug: typedaemon
+slug: typedaemon-beta
 image: ghcr.io/matchlighter/typedaemon
+stage: experimental
+advanced: true

@@ -1,0 +1,59 @@
+name: Publish Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: The version to release
+        required: true
+      content:
+        description: The content of the release-notes
+        required: true
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+    - uses: actions/checkout@v3.5.2
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - run: pip install -r script/requirements.txt
+    - run: script/bump-version.py ${{ github.event.inputs.version }}
+    - name: Write Beta changelog
+      run: |
+        cat > typedaemon-beta/CHANGELOG.md << 'EOF'
+        ## ${{ github.event.inputs.version }}
+
+        ${{ github.event.inputs.content }}
+        EOF
+    - name: Write Stable changelog
+      if: ${{ !contains(github.event.inputs.version, 'b') }}
+      run: |
+        cat > typedaemon/CHANGELOG.md << 'EOF'
+        ## ${{ github.event.inputs.version }}
+
+        ${{ github.event.inputs.content }}
+        EOF
+    - name: Commit version bump
+      id: commit_version
+      run: |
+        git config user.name typedaemonbot
+        git config user.email typedaemon@matchlighter.net
+        git add .
+        git commit -m "Bump version to ${{ github.event.inputs.version }}"
+        git push
+        COMMIT=$(git rev-parse HEAD)
+        echo "::set-output name=commit_sha::${COMMIT}"
+    - name: Create a Release
+      uses: actions/create-release@v1.1.4
+      continue-on-error: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.event.inputs.version }}
+        release_name: ${{ github.event.inputs.version }}
+        body: ${{ github.event.inputs.content }}
+        prerelease: ${{ contains(github.event.inputs.version, 'b') }}
+        commitish: ${{ steps.commit_version.outputs.commit_sha }}
