@@ -23,7 +23,7 @@ base: &base
   ingress_stream: true
   host_network: false
   ports:
-    80/tcp: 1880
+    80/tcp: 1980
     9000/tcp: 9000
   ports_description:
     80/tcp: Web interface
