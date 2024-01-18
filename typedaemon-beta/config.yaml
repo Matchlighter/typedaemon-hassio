@@ -13,7 +13,7 @@ ingress_port: 0
 ingress_stream: true
 host_network: false
 ports:
-  80/tcp: 1880
+  80/tcp: 1980
   9000/tcp: 9000
 ports_description:
   80/tcp: Web interface
@@ -34,7 +34,7 @@ options:
   home_assistant_dashboard_integration: false
 schema: {}
 name: TypeDaemon (beta)
-version: 0.2.3
+version: 0.3.0
 slug: typedaemon-beta
 image: ghcr.io/matchlighter/typedaemon
 stage: experimental

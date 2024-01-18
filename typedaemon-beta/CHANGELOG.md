@@ -1,3 +1,3 @@
-## 0.2.3
+## 0.3.0
 
-Working on release automation
+Improve template application
