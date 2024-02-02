@@ -34,7 +34,7 @@ options:
   home_assistant_dashboard_integration: false
 schema: {}
 name: TypeDaemon (beta)
-version: 0.3.0
+version: 0.3.1
 slug: typedaemon-beta
 image: ghcr.io/matchlighter/typedaemon
 stage: experimental
