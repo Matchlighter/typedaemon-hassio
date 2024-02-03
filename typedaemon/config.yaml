@@ -33,6 +33,6 @@ environment:
 options: {}
 schema: {}
 name: TypeDaemon
-version: 0.3.1
+version: 0.3.3
 slug: typedaemon
 image: ghcr.io/matchlighter/typedaemon
