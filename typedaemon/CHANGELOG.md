@@ -1,3 +1,3 @@
 ## 0.3.4
 
-0
+- 558be86 ci: improve changelog generation
