@@ -1,4 +1,3 @@
-## 0.3.5
+## 0.3.6
 
-- ae1a8a4 keep sleeping until plugins start
-- 558be86 ci: improve changelog generation
+- 29ed961 another attempt at fixing disconnection issue
