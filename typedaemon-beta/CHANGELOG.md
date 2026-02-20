@@ -1,162 +1,17 @@
-## 0.3.8
+## 0.3.9
 
-- fb2d0d4 bump
-- b646163 fix CI bug
-- 8bd4aa3 fix select Entity
-- e9d71b1 fix autocleaner bug for inputs
-- b0fa5c1 fix issue with first-time containerized startup fixes #2
-- 8b0091d another attempt at fixing disconnection issue
-- 4974c17 rework build process
-- 3ac21e3 fix a couple of TS errors
-- 2a5228f bump MobX and use ha-mobx-store
-- 8eb9792 fix plugin logging
-- ce7a347 work on label support
-- f4a695e fix addExposer cleaner
-- f2918c7 patch net module
-- f98122f round out date sheduling format
-- 1478f97 improve some more logging
-- b9b1582 load suntime config from HA
-- 92e2321 improve forced shutdown logging
-- 877158f improve app lifecycle, esp logging and cleanups
-- d107f95 fix logging config reload
-- 3ffbcfa try fix logging again
-- c54ad3a fix circular dep in util
-- f5b09d7 try fix logfile cleanup
-- ba94c54 improve module resolution and type hints
-- 7e53efa improve debounce/throttle re-export location
-- 540a2a2 fix tsconfig generation
-- f8c46f4 re-export debounce and throttle functions
-- 68b27cd improve lifecycle and plugin waiting
-- 32b76be update tags to always push tag edge/branch
-- e73031a keep sleeping until plugins start
-- 524621a ci: improve changelog generation
-- ede3771 update CI
-- 61ed722 limit auto release running
-- fc74793 improve internal version tracking
-- 258b842 add auto-releasing
-- 984b257 auto-sync dev_env after an update
-- d964f60 tweak docs
-- 3c7bf12 tweak plugin structure
-- 121b5cc fix input_boolean type, fix input intial value
-- 30a53b6 fix input.text types
-- 2e98372 fix startup error not logging to app, tweak docs
-- e15a498 make HA plugin retry initial connection
-- 22dca32 improve template app
-- 7caa30a improve logging separation, enable patch-package
-- ecc48a8 fix input_button events
-- 4d21f05 simplify plugin api arch to reduce instances - each Plugin instance now has 1 API instance - APIs are now always bound - default API export uses a Proxy
-- 2a15e24 work on app proxies and runtime APIs
-- e742749 work on cross-get system
-- 99e367f overhaul resumables again - better serialization of settled items - simplified .all and .allSettled implementations - simplified FailedResume design - better handling of errors when serializing - fix FailedResume linking - cleanup unused code
-- be01e19 fix bash_profile, dockerignore
-- 4df2905 improve td shim
-- b9800e1 add destroyers for future app deletion plans
-- 29f2fe2 quiet ssh in td command
-- c7b68ab fix some shutdown bugs
-- a4d4e20 fix cross-call system
-- 8364cd8 misc
-- 0c20b49 fix workflow
-- c71ffdf add mappath script
-- 0162940 work on release automation
-- aac37d8 improve td shim and add static socat bin
-- cf0cb6b improve log rotation
-- fabcb5d simplify TDAbstractEntity handle_command
-- 54e0cb0 add persist_state option to basicRWApi decorators
-- bf04d8b misc fixes, particularly with resumables
-- fa6251d fix logging bug
-- e2f42b0 fix extra arg to HA input APIs
-- 4e36e50 add autocleaning entities
-- 93cb396 add Array and Object operations to persistence
-- abdbdda add fallback logger
-- 01d64c7 make @entity and @persistent decorators compatible
-- 4b9db47 add some logging to the HA Plugin
-- 9f0eefa fix not logging app-side error stacks
-- 9e09074 re-add setTimeout and friends to app global
-- 148a180 close http sockets on app shutdown
-- 17f513f cleanup runtime structure
-- 7fc91ef add shared persistent storage
-- 62cab3a sync server public keys
-- 06625ea add http handling and app endpoints
-- 0d54e0a improve shell experience, fix dev_env command
-- c8e0bee bump vm2 patch
-- b4feacd configure locales for SSH
-- ad9e86d add motd and PS1
-- 156e647 fix SSH connection
-- 9ebbf85 add HA subscribe_events and subscribe_state
-- 1a088f1 bump vm2
-- 00038ab more explicitly bind callbacks to app
-- b7cdbd3 make entity.application a getter
-- 6394ebc fix subscription binding
-- 53e9b8f add ref counting to HA subscriptions
-- 77f83f9 improve logging
-- b3d03ce await for cleanups
-- 4bd3c7c fix shared_operating_dir
-- c3735a5 small misc
-- 929aac2 hoist axios
-- 1682527 change ssh port to at least support host-network
-- f9924db cleanup docker build
-- 242fd33 fix some package installation
-- 0141f04 use moduleResolution: bundler
-- dfe2275 S6 fixes
-- 072631e support either netcat or socat
-- 3e7ce25 add tooling to conect to container in hassio
-- e65f737 work on CLI connector
-- 3638628 fix Entity domain base
-- 83e42af add shared_operating_directory (for apps that share source)
-- a1a6cb8 rollback S6
-- 30e18da build fixes
-- 78aebab make "mqtt" plugin default to non-silent
-- 5de9b74 add non-decorator persistence API
-- 2f18c95 add CrossCallStore to manage cross-app calls
-- db74505 add persistent storage
-- 7517ea2 some HA cleaning
-- 25b8902 add additional entity domains and clean IDs
-- 98824d9 mqtt allow disabling system messages
-- ad13156 split entities APIs to separate file
-- eb13895 work on entity framework
-- d876974 add subscribe and webhook HA APIs
-- 9f43d93 bump TS and HA websocket
-- ea99ef1 cleanup verbose invoke()s
-- c112862 more work on entities
-- 691c40d cleanup entity framework, remove unnecessary uuids
-- 8d88666 implement scheduling hooks
-- 34ad784 fix some lifecycle bugs
-- b01c416 add Entity framework for creating HA entities
-- a74cb57 checkin
-- 895a1cc checkin resumable
-- 439c341 add started hook
-- 031b0a0 some cleanup and code comments
-- 51cbe27 add backoff to mqtt reconnect
-- 5e7773b fix README
-- 68af569 fix docker stop and mqtt service
-- 70a9487 cleanup skel
-- 39c28a8 fetch mqtt connection info from supervisor
-- d69177c fix supervisor api
-- af8b8c1 rename dev to edge
-- a2c869f add CI
-- f20ed5c create Docker configs
-- 2f998c1 handle failed-to-resume resumables
-- fe70422 ensure system modules aren't overidden
-- ce17c66 fix some shutdown issues
-- 3163076 save and resume resumables
-- cd694e3 improve generated package.json and tsconfig
-- 879f9ba checkin
-- 80657f3 move limit & decorator_fills to common_library
-- ed5c017 add basic CLI
-- 7ffdc39 hook and return overridden MobX
-- 3d1fc07 plugin work and improve application traces
-- 2fac603 work on HA plugin
-- eff6d06 mqtt works!
-- f852734 little to a lot of everything. except CLI
-- f0827f9 implement package dependencies
-- 60be4d7 minor refactor
-- 0ad6864 plugin hypervising
-- 4023882 hypervisor, app lifecycle, file watching - all working
-- 90f903d checkin
-- 2d88a79 work on the hypervisor
-- 3ef076b some cleanup
-- 8192867 improve end-user experience by making macros implicit
-- f7fdc9e checkin
-- 47ba1ae ResumableRuntime work
-- 7d96767 apply AGPLv3 license
-- 22f1358 initial commit
+- 7b99bcc bump version
+- 6308f29 add simple/classless/Script apps
+- bff1b7d try fix build caching
+- 6380fb4 improve imperative APIs
+- 746bf10 additional Sentry catch, sourcemap fix, transformer fix
+- e55c939 fix some script/wait bugs. Add Sentry support
+- e9d1f8e normalize imports and resolve some circular issues
+- 3df8e34 add tests for ResumablePromise
+- 634d5c7 configure tests and add some tests around parsing our custom date/time format
+- 04e8bda bump nodejs
+- 04a649c bump nodejs
+- 968ae96 improve performance around bad/impossible schedule dates
+- 2eb6892 fix resumable bug and work on wait
+- bd81e95 work on wait/when
+- ab5b469 work on implementation of scripts
