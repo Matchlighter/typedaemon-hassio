@@ -1,3 +1,6 @@
 ---
-configuration: {}
+configuration:
+  tailcat:
+    name: Tailcat remote access
+    description: Reach TypeDaemon's SSH server (for `td` and remote development) through a tailcat tunnel, with no open port. The address is written to `.typedaemon/connection_params`; anyone with it can reach SSH (the login key is still required).
 network: {}

@@ -48,8 +48,10 @@ base: &base
   environment:
     TYPEDAEMON_CONFIG: /config/typedaemon
 
-  options: {}
-  schema: {}
+  options:
+    tailcat: false
+  schema:
+    tailcat: bool
 
 typedaemon-edge:
   <<: *base
@@ -63,7 +65,11 @@ typedaemon-edge:
   image: ghcr.io/matchlighter/typedaemon
   base_image: ghcr.io/matchlighter/typedaemon:edge
   options:
+    tailcat: false
     home_assistant_dashboard_integration: false
+  schema:
+    tailcat: bool
+    home_assistant_dashboard_integration: bool
 
 typedaemon-beta:
   <<: *base
@@ -76,7 +82,11 @@ typedaemon-beta:
   stage: experimental
   advanced: true
   options:
+    tailcat: false
     home_assistant_dashboard_integration: false
+  schema:
+    tailcat: bool
+    home_assistant_dashboard_integration: bool
 
 typedaemon-stable:
   <<: *base
