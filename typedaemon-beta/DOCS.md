@@ -19,6 +19,14 @@ Example add-on configuration:
 
 ```json
 {
-
+  "tailcat": false
 }
 ```
+
+### Option: `tailcat`
+
+Reach TypeDaemon's SSH server (used by `td` and remote development) through a [tailcat](https://github.com/tailscale/tailcat) tunnel, with no open port. Restart the add-on after changing. The tailcat address is written to `typedaemon/.typedaemon/connection_params`; anyone with it can reach SSH (the login key is still required), so keep it private.
+
+### Option: SSH port
+
+Port `7722` (SSH) is disabled by default. Set a host port in the add-on's Network section to reach it directly (then use `TD_SSH_HOST=host:port` with `td`).

@@ -32,8 +32,10 @@ services:
 - mqtt:want
 environment:
   TYPEDAEMON_CONFIG: /config/typedaemon
-options: {}
-schema: {}
+options:
+  tailcat: false
+schema:
+  tailcat: bool
 name: TypeDaemon
 version: 0.4.0
 slug: typedaemon
