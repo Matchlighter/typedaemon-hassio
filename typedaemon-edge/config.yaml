@@ -13,11 +13,13 @@ ingress_port: 0
 ingress_stream: true
 host_network: false
 ports:
-  80/tcp: 1880
+  80/tcp: 1980
   9000/tcp: 9000
+  7722/tcp: null
 ports_description:
   80/tcp: Web interface
   9000/tcp: Http interface/API
+  7722/tcp: SSH (remote `td` / dev access). Disabled until a host port is set
 hassio_api: false
 homeassistant_api: true
 auth_api: true
