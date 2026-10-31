@@ -9,7 +9,7 @@ arch:
 - armhf
 - armv7
 ingress: true
-ingress_port: 0
+ingress_port: 8099
 ingress_stream: true
 host_network: false
 ports:
