@@ -39,7 +39,7 @@ schema:
   tailcat: bool
   home_assistant_dashboard_integration: bool
 name: TypeDaemon (edge)
-version: edge2
+version: edge
 slug: typedaemon-edge
 stage: experimental
 advanced: true
