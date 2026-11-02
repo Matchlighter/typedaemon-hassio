@@ -1,6 +1,125 @@
-## 0.4.0
+## 0.5.0
 
-- bd8e301 bump version
-- cbb5894 enable Entiity indexing
-- 28052a4 Bump state store to enable fast entity searching
-- 7b99bcc bump version
+- 920589c bump to 0.5.0
+- 69d47cd sentry: separate app and system DSNs; readable non-Error reports
+- fc00408 deps: ha-mobx-store ^0.5.5 (background syncs no longer reject unhandled)
+- 9d7d12d ha: stop SubCountingConnection multiplying subscriptions on reconnect
+- fdd6d15 dev_env: incremental, manifest-based type def sync
+- 507a175 dev_env: copy only runtime dependency type defs
+- 0ffdb0a Build dashboard UI to dist/dashboard-ui
+- e0282d1 findRelatedEntities: accept entity ID string
+- 07a318f feat: complete HA lock entity
+- 3703c72 Merge branch 'dashboard' into 'master'
+- 77aeea1 Admin dashboard (td-arf)
+- 2dac537 Merge branch 'fix/supervisor-api' into 'master'
+- 695bc62 supervisor: create API client only when SUPERVISOR_TOKEN is set; parse JSON
+- 65d229c script state gets its own file; set aside legacy object-shaped resumable state
+- 4cf323b autoclean: keep entries whose HA removal failed and report them
+- 0b0499c destroyer: run all destroyers, then throw an aggregate of failures
+- 310b511 schedule: log a throwing callback instead of ending the schedule
+- 860424c script: restart mode honors limit (default 1)
+- 034d5df Merge branch 'purple-items' into 'master'
+- f82961c Merge branch 'integration/entity-framework' into 'master'
+- ae7942e nowIsBetween: observable in MobX derivations
+- c3d7d8f Merge td-purple-fix: code-review fixes
+- cc16349 Address purple-items review: cancelAll guard, refuse script runs during shutdown, safer config deps install
+- 5e14eb5 Merge td-purple-d: pre-install config dependencies
+- 67a5c42 feat: pre-install configured dependencies into config root node_modules
+- adb7ac2 Merge td-purple-a: nowIsBetween
+- 4b694e7 feat: nowIsBetween(start, end, opts) schedule helper
+- 6b25d46 Merge td-purple-b: @when resume default max
+- 8c312cf feat: default max (24h) for @when resume; add resume tests
+- f4d1500 Merge td-purple-c: @script restart/wait/cancel default
+- ba1347a @script: fix restart mode, implement shutdown 'wait', explicit cancel default
+- 4a4b201 Merge td-7jt: stream camera via companion integration
+- 1db7f91 docs: snapshot vs stream cameras
+- 13aa30a feat(entity_api): ha.entity.stream_camera via the companion integration
+- 72d9c6a feat(companion): camera platform for TypeDaemon stream cameras
+- 4fc2ac8 refactor(entity_api): entity_kind to namespace entity classes sharing an HA domain
+- ad4821d Merge review-fixes: shared entity helpers, naming, test harness
+- f470dd9 refactor(entity_api): consistent on_<service> handler naming via CommandHandlers<Services>
+- fa2f220 fix(vacuum): drop battery/clean_area from VacuumFeature (not accepted by HA MQTT vacuum)
+- d007d16 refactor(entity_api): shared command/discovery helpers across domains
+- 83d757e fix(entity_api): cover/fan command_keys() copy instead of mutating super's array
+- 580197c refactor(entity_api): DiscoveryData type, stateField/omitDiscoveryKeys helpers, guard reserved state fields
+- 8b410c4 test: extract shared entity_api test harness into test/helpers/entity_api.ts
+- 2a9dd90 Merge td-27s.7: climate domain
+- 7b8bbb2 feat: climate (HVAC) entity domain
+- b002009 Merge td-27s.12: water heater domain
+- ab60782 test: fix water_heater test uuid
+- e3f8fec feat: water_heater domain (td-27s.12)
+- 4df1f1a Merge td-27s.11: vacuum domain
+- 1c21b75 feat: vacuum entity domain
+- b779063 Merge td-27s.6: humidifier domain
+- db3b9e0 feat: humidifier entity domain
+- 2445118 Merge td-27s.4: alarm control panel domain
+- 9f7e352 feat: alarm_control_panel domain (td-27s.4)
+- acef35b Merge td-27s.3: fan domain
+- 7cbc0e6 feat(entity): fan domain (percentage/preset/oscillation/direction via multi-topic seam)
+- a10225b Merge td-27s.2: cover domain
+- 5f76d88 feat(entity): cover domain (position/tilt via multi-topic seam)
+- 2518667 Merge td-27s.9: update domain
+- 60153d8 feat: update entity domain (td-27s.9)
+- a75a896 Merge td-27s.5: camera domain
+- d43c0a1 fix: camera discovery_data typing
+- 794ced0 feat: camera MQTT domain (raw image topic)
+- 8fa2a23 Merge td-27s.8: siren domain
+- e0c33b2 feat: Siren entity domain (td-27s.8)
+- ef2c810 Merge td-27s.10: tag scanner domain
+- 6afb339 feat: Tag Scanner entity domain (td-27s.10)
+- d677875 Merge td-27s.1: multi-topic MQTT commands
+- 5c1e968 Entity base: named multi-topic MQTT commands + per-field JSON state
+- d641dc2 fix: register @script/@when annotations on decorator context
+- 3773ec6 Merge review-fixes
+- 20d36e2 Settle cancelled unstarted suspend-mode scripts; real-path queue tests; assertive type tests
+- 578ba41 Merge td-9ve: @script typechecks on async methods
+- 5861b73 Merge branch 'integration/open-beads' into td-9ve
+- bb95db1 script(): generic decorator typing so @script works on async methods (td-9ve)
+- d4a304c Merge td-028: WhenDecorator callback accepts any return
+- cccc51b Merge branch 'integration/open-beads' into td-028
+- da9b25e when: accept any return from action callback (td-028)
+- cffabe7 Merge td-q4b: settle cancel of unstarted executor
+- e0c377e fix: cancelling a queued (unstarted) executor now settles (td-q4b)
+- 9d9403f fix generated tsconfig: use valid module/moduleResolution pair
+- a987b12 fix cross-call reject bug
+- 92644a5 Merge branch 'typed-app-config' into 'master'
+- 29cacf0 Merge branch 'feat/open-port-7722' into 'master'
+- 77fffa2 Merge branch 'fix/clean-ha-state-logging' into 'master'
+- 4f185bd Merge branch 'master' into typed-app-config
+- 3968fa1 Merge branch 'master' into feat/open-port-7722
+- 067dca4 Merge branch 'master' into fix/clean-ha-state-logging
+- c3e0f11 Merge branch 'fix/parse-yaml' into 'master'
+- 9cbf740 Merge branch 'ha-entity-types' into 'typed-app-config'
+- 87ed314 Merge branch 'feat/ha-on-event' into 'master'
+- 7f5a6ed Merge branch 'feat/initialize-timeout' into 'master'
+- d80ac3e Merge branch 'fix/multi-app-file-reload' into 'master'
+- 7c93b9d Merge branch 'feat/custom-ha-actions' into 'master'
+- b9483a0 Merge branch 'feat/td-cli-commands' into 'master'
+- b1ff80c Merge branch 'test/resumables-persistence' into 'master'
+- 549ea34 fix parseYaml: return parsed value, fix filename destructuring, extend default schema, fix !secret
+- ff56b21 Entity types: 30s throttle; pause on churn and resume when it subsides
+- 11552ad Rate-limit entity type generation; richer JSDoc; typed entity API params
+- 6c232ff Generate entity ID types from Home Assistant
+- 9e0e7e9 Support named exports in typed app config
+- 8787235 Fix app registry keys/specifiers and tidy typing
+- fcd3a93 Type per-app `config` in typedaemon_config via generated AppRegistry
+- 47178c7 tailcat: enable via add-on option (/data/options.json) or TYPEDAEMON_TAILCAT instead of a flag file
+- 9b25716 td: fall back between socket, TCP and tailcat; optional tailcat service
+- 1e48273 Add hacs.json so integration is installable via HACS
+- 80f8cc2 ssh: fix sshd_config edits, chmod 600 login key, add TD_SSH_HOST TCP mode to td
+- dcc7fc2 ha.action: prefix service name with app uuid by default; opt out with app_prefix: false
+- e487e8b resumables: don't suspend when parameters or pending arg aren't serializable
+- 8abf430 Drop local HAEntity inspect patch; use ha-mobx-store ^0.5.4
+- 40593d1 Use @debounce again; bump common_library to ^1.6.37
+- 498e05c resumables: fix this.m(await x), for...in, and pending return across finally
+- 5a48040 Add test suite for Resumables and Persistence; fix bugs found
+- a465f9c cli: add repl, delete, clean, yarn and patch-package commands
+- a456020 Add custom HA Actions via TypeDaemon companion integration
+- f1e488f Clean logging of `ha.state[x]`
+- a09ab50 ssh: listen on all interfaces so port 7722 is reachable outside the container
+- a5fb6dc fix: restart every app depending on a changed source file
+- 5e079da Time out hung Application initialize()
+- 7a8d3b6 ha: filter `subscribe_events` by event data
+- efa3dc7 design brief
+- 960523b mqtt: fan out messages from one listener per connection
+- 2462db9 strip non-type files from `.typedaemon/node_modules` - hopefully reduce Studio Code Server memory

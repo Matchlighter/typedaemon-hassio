@@ -9,7 +9,7 @@ arch:
 - armhf
 - armv7
 ingress: true
-ingress_port: 8099
+ingress_port: 0
 ingress_stream: true
 host_network: false
 ports:
@@ -37,6 +37,6 @@ options:
 schema:
   tailcat: bool
 name: TypeDaemon
-version: 0.4.0
+version: 0.5.0
 slug: typedaemon
 image: ghcr.io/matchlighter/typedaemon

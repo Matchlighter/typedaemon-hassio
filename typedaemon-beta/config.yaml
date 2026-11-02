@@ -9,7 +9,7 @@ arch:
 - armhf
 - armv7
 ingress: true
-ingress_port: 8099
+ingress_port: 0
 ingress_stream: true
 host_network: false
 ports:
@@ -39,7 +39,7 @@ schema:
   tailcat: bool
   home_assistant_dashboard_integration: bool
 name: TypeDaemon (beta)
-version: 0.4.0
+version: 0.5.0
 slug: typedaemon-beta
 image: ghcr.io/matchlighter/typedaemon
 stage: experimental
