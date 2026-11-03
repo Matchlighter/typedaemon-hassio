@@ -75,7 +75,7 @@ typedaemon-beta:
   <<: *base
   directory: typedaemon-beta
   name: TypeDaemon (beta)
-  version: '0.5.0'  # BETA
+  version: '0.6.0'  # BETA
   slug: typedaemon-beta
   description: "Beta version of TypeDaemon add-on"
   image: ghcr.io/matchlighter/typedaemon
@@ -92,7 +92,7 @@ typedaemon-stable:
   <<: *base
   directory: typedaemon
   name: TypeDaemon
-  version: '0.5.0'  # STABLE
+  version: '0.6.0'  # STABLE
   slug: typedaemon
   image: ghcr.io/matchlighter/typedaemon
 
